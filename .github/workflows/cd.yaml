@@ -1,0 +1,21 @@
+name: Test CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    steps:
+    - name: Connect to server and deploy changes
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: |
+        cd ~/projects/ci-cd-test-project/
+        git pull
+        npm i
+        pm2 restart 32
