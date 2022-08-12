@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/muhammadyunusuz/ci-cd-test-project/issues"
   },
-  "homepage": "https://github.com/muhammadyunusuz/ci-cd-test-project#readme"
+  "homepage": "https://github.com/muhammadyunusuz/ci-cd-test-project#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
